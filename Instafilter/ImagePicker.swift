@@ -2,24 +2,24 @@
 //  ImagePicker.swift
 //  Instafilter
 //
-//  Created by slava bily on 30/4/20.
+//  Created by slava bily on 2/5/20.
 //  Copyright © 2020 slava bily. All rights reserved.
 //
 
-import Foundation
 import SwiftUI
 
 struct ImagePicker: UIViewControllerRepresentable {
     
-    @Binding var image: UIImage?
-    
     @Environment(\.presentationMode) var presentationMode
     
-    class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    @Binding var image: UIImage?
+    
+    class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
         
-        var parent: ImagePicker
+        let parent: ImagePicker
         
         init(_ parent: ImagePicker) {
+            
             self.parent = parent
         }
         
@@ -49,4 +49,5 @@ struct ImagePicker: UIViewControllerRepresentable {
     func updateUIViewController(_ uiViewController: UIImagePickerController, context: UIViewControllerRepresentableContext<ImagePicker>) {
         
     }
+    
 }
