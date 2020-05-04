@@ -23,7 +23,11 @@ struct ContentView: View {
     let context = CIContext()
     
     @State private var showingFilterSheet = false
-     
+    
+    var errorHandler = {
+        print("There is no image to save!")
+    }
+ 
     var body: some View {
         
         let intensity = Binding<Double>(
@@ -70,7 +74,12 @@ struct ContentView: View {
                     Spacer()
                     
                     Button("Save") {
-                        guard let processedImage = self.processedImage else { return }
+                        guard let processedImage = self.processedImage else {
+                            
+                            self.errorHandler()
+                            
+                            return
+                        }
                         
                         let imageSaver = ImageSaver()
                         
