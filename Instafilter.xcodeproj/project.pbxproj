@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B9745D2E245F2DE400D21A7D /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9745D2D245F2DE400D21A7D /* ImageSaver.swift */; };
 		B99791DE245939AF0092BB36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99791DD245939AF0092BB36 /* AppDelegate.swift */; };
 		B99791E0245939AF0092BB36 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99791DF245939AF0092BB36 /* SceneDelegate.swift */; };
 		B99791E2245939AF0092BB36 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99791E1245939AF0092BB36 /* ContentView.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B9745D2D245F2DE400D21A7D /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 		B99791DA245939AF0092BB36 /* Instafilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instafilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B99791DD245939AF0092BB36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B99791DF245939AF0092BB36 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			children = (
 				B99791DD245939AF0092BB36 /* AppDelegate.swift */,
 				B99791DF245939AF0092BB36 /* SceneDelegate.swift */,
+				B9745D2D245F2DE400D21A7D /* ImageSaver.swift */,
 				B9CAB6E8245D54E000C170D1 /* ImagePicker.swift */,
 				B99791E1245939AF0092BB36 /* ContentView.swift */,
 				B99791E3245939B80092BB36 /* Assets.xcassets */,
@@ -151,6 +154,7 @@
 			files = (
 				B99791DE245939AF0092BB36 /* AppDelegate.swift in Sources */,
 				B9CAB6E9245D54E000C170D1 /* ImagePicker.swift in Sources */,
+				B9745D2E245F2DE400D21A7D /* ImageSaver.swift in Sources */,
 				B99791E0245939AF0092BB36 /* SceneDelegate.swift in Sources */,
 				B99791E2245939AF0092BB36 /* ContentView.swift in Sources */,
 			);
