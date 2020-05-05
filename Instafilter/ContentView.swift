@@ -23,8 +23,9 @@ struct ContentView: View {
     let context = CIContext()
     
     @State private var showingFilterSheet = false
-    
     @State private var showingSavingAlert = false
+    
+    @State private var filterName = "Change filter"
  
     var body: some View {
         
@@ -65,7 +66,7 @@ struct ContentView: View {
                 .padding(.vertical)
                 
                 HStack {
-                    Button("Change filter") {
+                    Button(filterName) {
                         self.showingFilterSheet = true
                     }
                     
@@ -105,24 +106,31 @@ struct ContentView: View {
                 ActionSheet(title: Text("Select a filter"), buttons: [
                     .default(Text("Christalize"), action: {
                         self.setFilter(CIFilter.crystallize())
+                        self.filterName = "Christalize"
                     }),
                     .default(Text("Edges"), action: {
                         self.setFilter(CIFilter.edges())
+                        self.filterName = "Edges"
                     }),
                     .default(Text("Gaussian Blur"), action: {
                         self.setFilter(CIFilter.gaussianBlur())
+                        self.filterName = "Gaussian Blur"
                     }),
                     .default(Text("Pixellate"), action: {
                         self.setFilter(CIFilter.pixellate())
+                        self.filterName = "Pixellate"
                     }),
                     .default(Text("Sepia Tone"), action: {
                         self.setFilter(CIFilter.sepiaTone())
+                        self.filterName = "Sepia Tone"
                     }),
                     .default(Text("Unsharp Mask"), action: {
                         self.setFilter(CIFilter.unsharpMask())
+                        self.filterName = "Unsharp Mask"
                     }),
                     .default(Text("Vignette"), action: {
                         self.setFilter(CIFilter.vignette())
+                        self.filterName = "Vignette"
                     }),
                     .cancel()
                 ])
