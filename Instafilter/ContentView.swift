@@ -24,9 +24,7 @@ struct ContentView: View {
     
     @State private var showingFilterSheet = false
     
-    var errorHandler = {
-        print("There is no image to save!")
-    }
+    @State private var showingSavingAlert = false
  
     var body: some View {
         
@@ -76,8 +74,8 @@ struct ContentView: View {
                     Button("Save") {
                         guard let processedImage = self.processedImage else {
                             
-                            self.errorHandler()
-                            
+                            self.showingSavingAlert = true
+                           
                             return
                         }
                         
@@ -90,6 +88,9 @@ struct ContentView: View {
                             print("Oops: \(error.localizedDescription)")
                         }
                         imageSaver.writeToPhotoAlbum(image: processedImage)
+                    }
+                    .alert(isPresented: $showingSavingAlert) {
+                         Alert(title: Text("Error"), message: Text("There is no image to save!"), dismissButton: .default(Text("OK")))
                     }
                 }
             }
